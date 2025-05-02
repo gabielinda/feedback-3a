@@ -3,11 +3,7 @@ import { InputButton } from "./InputButton"
 
 export function CardInicial ({nota, SetNota, setSubmited}) {
 
-    function handleTrocarNota(nota) {
-        SetNota(nota)
-   
-        console.log (nota)
-   }
+    
 
    function handleSubmit() {
     if (nota !== 0) {
@@ -32,11 +28,11 @@ export function CardInicial ({nota, SetNota, setSubmited}) {
         All feedback is appreciated to help us improve our offering!</p>
       
         <div className="flex justify-between mb-6">
-           <InputButton valor={1} handleTrocarNota={handleTrocarNota}/>
-           <InputButton valor={2} handleTrocarNota={handleTrocarNota}/>
-           <InputButton valor={3} handleTrocarNota={handleTrocarNota}/>
-           <InputButton valor={4} handleTrocarNota={handleTrocarNota}/>
-           <InputButton valor={5} handleTrocarNota={handleTrocarNota}/>
+           <InputButton valor={1} SetNota={SetNota} />
+           <InputButton valor={2} SetNota={SetNota} />
+           <InputButton valor={3} SetNota={SetNota} />
+           <InputButton valor={4} SetNota={SetNota} />
+           <InputButton valor={5} SetNota={SetNota} />
        </div>
       
       <button  onClick={handleSubmit} className="bg-orange w-full py-3 rounded-3xl uppercase text-sm tracking-1 font-bold hover:bg-white hover:text-orange cursor-pointer">Submit</button>
